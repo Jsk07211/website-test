@@ -134,22 +134,22 @@ class TestimonialCarousel {
     const grid = document.getElementById('testimonialsGrid');
     const currentTestimonials = this.getCurrentTestimonials();
     
-    grid.innerHTML = currentTestimonials.map(t => `
-      <div class="testimonial-card">
-        <div class="testimonial-content">
-          <div class="testimonial-header">
-            <div class="testimonial-avatar">
-              <img src="${asset(t.avatar)}"
-                  alt="${t.name}"
-                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div style="display:none; align-items:center; justify-content:center; width:100%; height:100%; background:#f5f5f5; border-radius:50%; font-weight:600; font-size:1.125rem; color:#666;">
-                ${t.name.split(' ').map(n => n[0]).join('')}
-              </div>
+  grid.innerHTML = currentTestimonials.map(t => `
+    <div class="testimonial-card">
+      <div class="testimonial-content">
+        <div class="testimonial-header">
+          <div class="testimonial-avatar">
+            <img src="${asset(t.avatar)}"
+                alt="${t.name}"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div style="display:none; align-items:center; justify-content:center; width:100%; height:100%; background:#f5f5f5; border-radius:50%; font-weight:600; font-size:1.125rem; color:#666;">
+              ${t.name.split(' ').map(n => n[0]).join('')}
             </div>
           </div>
         </div>
       </div>
-    `).join('');
+    </div>
+  `).join('');
   }
   
   renderPageDots() {
