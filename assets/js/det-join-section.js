@@ -1,16 +1,30 @@
 // prefix /<repo> for project sites
 (function () {
   function detectBase() {
+    // 1) If set in HTML: <script>window.BASE_URL="{{ '' | relative_url }}"</script>
     if (window.BASE_URL) return String(window.BASE_URL).replace(/\/$/, '');
-    const m = location.pathname.match(/^\/[^/]+/); // "/website-test" on GH Pages
+
+    // 2) Infer from this script tag's src (e.g., "/website-test/assets/js/det-join-section.js")
+    const s = document.querySelector('script[src*="det-join-section.js"]');
+    if (s && s.src) {
+      try {
+        const u = new URL(s.src, location.origin);
+        const parts = u.pathname.split('/').filter(Boolean); // ["website-test","assets","js","det-join-section.js"]
+        if (parts.length > 1) return `/${parts[0]}`; // "/website-test"
+      } catch (_) {}
+    }
+
+    // 3) Fallback to the first path segment of the current page
+    const m = location.pathname.match(/^\/[^/]+/);
     return m ? m[0] : '';
   }
+
   window.asset = function (p) {
     if (!p) return '';
     const base = detectBase();
-    if (/^https?:\/\//i.test(p)) return p;        // absolute url
-    if (p.startsWith('/')) return `${base}${p}`;   // "/assets/..." -> "/website-test/assets/..."
-    return base ? `${base}/${p}` : p;              // "assets/..." stays relative if no base
+    if (/^https?:\/\//i.test(p)) return p;       // absolute URL
+    if (p.startsWith('/')) return `${base}${p}`; // "/assets/..." -> "/<repo>/assets/..."
+    return base ? `${base}/${p}` : p;            // "assets/..."  -> "/<repo>/assets/..." (or stays relative)
   };
 })();
 
