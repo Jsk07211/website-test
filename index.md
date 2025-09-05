@@ -8,8 +8,6 @@ linkedin_followers: 40K+
 newsletter_subscribers: 7.5K+
 ---
 
-<script>window.BASE_URL = "{{ '' | relative_url }}";</script>
-<script src="{{ '/assets/js/det-join-section.js' | relative_url }}" defer></script>
 <link rel="stylesheet" href="{{ '/assets/css/det-join-section.css' | relative_url }}">
 <script src="{{ '/assets/js/det-join-section.js' | relative_url }}" defer></script>
 
@@ -240,5 +238,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
 ### Our Partners
 
-<a href="https://www.databricks.com"><img src="{{ '/assets/img/logo/databricks-logo.png' | relative_url }}" alt="Databricks Logo" height="100"></a>
-<a href="http://donut.com/"><img src="{{ '/assets/img/logo/donut-logo.png' | relative_url }}" alt="Donut Logo" height="100"></a>
+<a href="https://www.databricks.com"><img src="/assets/img/logo/databricks-logo.png" alt="Databricks Logo" height="100"></a>
+<a href="http://donut.com/"><img src="/assets/img/logo/donut-logo.png" alt="Donut Logo" height="100"></a>
