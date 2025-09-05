@@ -1,3 +1,19 @@
+// prefix /<repo> for project sites
+(function () {
+  function detectBase() {
+    if (window.BASE_URL) return String(window.BASE_URL).replace(/\/$/, '');
+    const m = location.pathname.match(/^\/[^/]+/); // "/website-test" on GH Pages
+    return m ? m[0] : '';
+  }
+  window.asset = function (p) {
+    if (!p) return '';
+    const base = detectBase();
+    if (/^https?:\/\//i.test(p)) return p;        // absolute url
+    if (p.startsWith('/')) return `${base}${p}`;   // "/assets/..." -> "/website-test/assets/..."
+    return base ? `${base}/${p}` : p;              // "assets/..." stays relative if no base
+  };
+})();
+
 // Testimonials data
 const testimonials = [
   {
