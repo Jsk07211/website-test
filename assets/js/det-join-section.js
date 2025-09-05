@@ -161,7 +161,7 @@ class TestimonialCarousel {
         <div class="testimonial-content">
           <div class="testimonial-header">
             <div class="testimonial-avatar">
-              <img src="${asset(testimonial.avatar)}" alt="${testimonial.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <img src="${asset(testimonial.avatar)}" alt="${testimonial.name}" onload="this.style.removeProperty('display'); const f=this.nextElementSibling; if (f) f.style.display='none';" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
               <div style="display:none; align-items:center; justify-content:center; width:100%; height:100%; background:#f5f5f5; border-radius:50%; font-weight:600; font-size:1.125rem; color:#666;">
                 ${testimonial.name.split(' ').map(n => n[0]).join('')}
               </div>
