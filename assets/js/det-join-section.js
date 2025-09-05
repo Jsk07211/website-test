@@ -108,7 +108,7 @@ const testimonials = [
     title: "Data Engineer",
     company: "Netflix Inc",
     text: "I have found the newsletter and the conferences/workshops quite useful and a great way to connect with other Data Engineers. I also joined the community as a mentor and it was highly fulfilling to work with young talent in this space.",
-    avatar: "/assets/img/testimonial/jai-balani.png",
+    avatar: "/assets/img/testimonial/jai-balani-headshot.png",
     linkedinUrl: "https://linkedin.com/in/jai-balani"
   },
   {
