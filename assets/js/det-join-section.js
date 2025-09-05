@@ -1,11 +1,3 @@
-const asset = (p) => {
-  if (!p) return '';
-  const base = (window.BASE_URL || '').replace(/\/$/, '');
-  if (/^https?:\/\//i.test(p)) return p;      // absolute URL -> leave as is
-  if (p.startsWith('/')) return `${base}${p}`; // '/assets/...' -> '/repo-name/assets/...'
-  return `${base}/${p}`;                       // 'assets/...'  -> '/repo-name/assets/...'
-};
-
 // Testimonials data
 const testimonials = [
   {
@@ -133,34 +125,42 @@ class TestimonialCarousel {
   renderTestimonials() {
     const grid = document.getElementById('testimonialsGrid');
     const currentTestimonials = this.getCurrentTestimonials();
-
-    grid.innerHTML = currentTestimonials.map(t => `
-      <article class="testimonial-card">
+    
+    grid.innerHTML = currentTestimonials.map(testimonial => `
+      <div class="testimonial-card">
         <div class="testimonial-content">
-          <header class="testimonial-header">
+          <div class="testimonial-header">
             <div class="testimonial-avatar">
-              <img src="${asset(t.avatar)}"
-                  alt="${t.name}"
-                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <img src="${testimonial.avatar}" alt="${testimonial.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
               <div style="display:none; align-items:center; justify-content:center; width:100%; height:100%; background:#f5f5f5; border-radius:50%; font-weight:600; font-size:1.125rem; color:#666;">
-                ${t.name.split(' ').map(n => n[0]).join('')}
+                ${testimonial.name.split(' ').map(n => n[0]).join('')}
               </div>
             </div>
-            <div class="testimonial-meta">
-              <div class="testimonial-name">${t.name}</div>
-              <div class="testimonial-role">${t.title}${t.company ? ` • ${t.company}` : ''}</div>
+            
+            <div class="testimonial-info">
+              <div class="testimonial-meta">
+                <div class="testimonial-details">
+                  <div class="testimonial-name">${testimonial.name}</div>
+                  <div class="testimonial-title">${testimonial.title}</div>
+                  <div class="testimonial-company">${testimonial.company}</div>
+                </div>
+                
+                <a href="${testimonial.linkedinUrl}" target="_blank" rel="noopener noreferrer" class="linkedin-link">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </a>
+              </div>
             </div>
-          </header>
-
-          <p class="testimonial-text">“${t.text}”</p>
-
-          ${t.linkedinUrl ? `
-            <a class="testimonial-link" href="${t.linkedinUrl}" target="_blank" rel="noopener">
-              View on LinkedIn
-            </a>` : ''
-          }
+          </div>
+          
+          <div class="testimonial-text">
+            "${testimonial.text}"
+          </div>
         </div>
-      </article>
+      </div>
     `).join('');
   }
   
