@@ -8,6 +8,8 @@ linkedin_followers: 40K+
 newsletter_subscribers: 7.5K+
 ---
 
+<script>window.BASE_URL = "{{ '' | relative_url }}";</script>
+<script src="{{ '/assets/js/det-join-section.js' | relative_url }}" defer></script>
 <link rel="stylesheet" href="{{ '/assets/css/det-join-section.css' | relative_url }}">
 <script src="{{ '/assets/js/det-join-section.js' | relative_url }}" defer></script>
 
