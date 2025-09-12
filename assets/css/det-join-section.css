@@ -188,8 +188,10 @@ body {
 }
 
 .testimonials-section .container {
-    max-width: 1200px;
-    padding: 0 1.5rem;
+  max-width: none;       
+  width: 100%;
+  padding-left: 0; 
+  padding-right: 0;
 }
 
 .testimonial-controls {
