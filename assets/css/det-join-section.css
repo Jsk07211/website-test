@@ -29,6 +29,10 @@ body {
     padding: 4rem 0;
 }
 
+.why-join-section .container {
+  max-width: 1200px;
+}
+
 .section-header {
     text-align: center;
     margin-bottom: 3rem;
