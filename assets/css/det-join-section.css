@@ -234,11 +234,19 @@ body {
 }
 
 /* Testimonials Grid */
-.testimonials-grid {
+/* .testimonials-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
     min-height: 400px;
+} */
+
+.testimonials-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+  justify-content: center;
+  justify-items: center;
 }
 
 @media (min-width: 1024px) {
@@ -255,6 +263,8 @@ body {
     border: 1px solid #e5e5e5;
     transition: all 0.2s ease;
     height: 100%;
+    min-width: 375px; 
+    width: 100%;
 }
 
 .testimonial-card:hover {
