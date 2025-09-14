@@ -29,8 +29,16 @@ body {
     padding: 4rem 0;
 }
 
-.why-join-section .container {
-  max-width: 1200px;
+.why-join-section .container { 
+    max-width: none; 
+} 
+
+.tiles-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+  justify-content: center;
+  justify-items: center;
 }
 
 .section-header {
