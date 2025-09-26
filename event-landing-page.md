@@ -234,7 +234,7 @@ subtitle: We're a global community of data engineers, building relationships and
         }
 
         /* Buttons */
-        .btn {
+        <!-- .btn {
             display: inline-flex;
             align-items: center;
             padding: 0.5rem 1rem;
@@ -244,7 +244,7 @@ subtitle: We're a global community of data engineers, building relationships and
             border-radius: 8px;
             transition: all 0.3s ease;
             font-weight: 500;
-        }
+        } -->
 
         .btn:hover {
             opacity: 0.9;
