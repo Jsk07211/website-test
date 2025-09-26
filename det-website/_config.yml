@@ -21,22 +21,20 @@ author: Xinran Waibel
 
 navbar-links:
   Home: "index"
-  Meet The Team: "team"
   Join Us:
-    - Slack: "http://join.det.life"
-    - Linkedin: "https://www.linkedin.com/company/data-engineer-things/"
-    - News letter: "https://dataengineerthings.substack.com/"
-    - Call for Speakers: "https://forms.gle/1cHE9hqNv5HZ3d35A"
+    - Newsletter: "https://dataengineerthings.substack.com/"
+    - LinkedIn: "https://www.linkedin.com/company/data-engineer-things/"
+    - Slack: "http://slack.dataengineerthings.org/"
+    - Call for Speakers: "http://meetup.dataengineerthings.org/cfp"
   Events:
-    - Seattle: "https://www.meetup.com/data-engineer-things-seattle-meetup/events/"
-    - Bay Area: "https://www.meetup.com/data-engineer-things-bay-area-meetup/events/"
-    - London: "https://www.meetup.com/data-engineer-things-london-meetup/events/"
+    - Meetups: "event-landing-page"
+    - Webinars: "https://www.youtube.com/@data-engineer-things"
     - Gallery: "eventsgallery"
   Resources:
+    - Resource Hub: "resource-hub"
     - Blogs: "https://medium.com/data-engineer-things"
-    - Youtube: "https://www.youtube.com/@data-engineer-things"
-  # Resources:
-  #   - Mentorship Program: "https://bit.ly/det-mentorship"
+    - Tech Talks: "https://www.youtube.com/@data-engineer-things"
+  Team: "team"
 
 ################
 # --- Logo --- #
@@ -45,6 +43,8 @@ navbar-links:
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
 avatar: "/assets/img/logo/det-logo.svg"
+
+social-share-image: "/assets/img/logo/det-logo.svg"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
 round-avatar: true
@@ -63,7 +63,7 @@ round-avatar: true
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
   #rss: true  # remove this line if you don't want to show an RSS link at the bottom
-  slack: 
+  slack:
   medium: https://medium.com/data-engineer-things
   linkedin: data-engineer-things
   youtube: data-engineer-things/streams
@@ -90,7 +90,7 @@ social-network-links:
 #  mastodon: instance.url/@username
 #  ORCID: your ORCID ID
 #  google-scholar: your google scholar
-#  discord: "invite_code" or "users/userid" or "invite/invite_code" 
+#  discord: "invite_code" or "users/userid" or "invite/invite_code"
 #  kaggle: yourname
 #  hackerrank: yourname
 #  gitlab: yourname
@@ -132,7 +132,7 @@ post_search: true
 # Allow sub-menu items (second-level navigation menu items) to be longer than the top-level menu
 # If this setting is off, then long sub-menu words might get cut off
 # See https://github.com/daattali/beautiful-jekyll/issues/765 to understand the issue this setting can solve
-navbar-var-length: false
+navbar-var-length: true
 
 # The keywords to associate with your website, for SEO purposes
 keywords: "data engineer,data engineering,data engineer community,data engineering community,data engineer meetup,data engineering meetup,what is data engineering,how to become a data engineer, how to learn data engineering"
@@ -223,23 +223,23 @@ gtag: "G-CC6XR5MSNN"
 #  label: blog-comments # Label that will be assigned to GitHub Issues created by Utterances
 
 # To use Staticman comments, uncomment the following section. You may leave the reCaptcha
-# section commented if you aren't using reCaptcha for spam protection. 
-# Using Staticman requires advanced knowledge, please consult 
-# https://github.com/eduardoboucas/staticman/ and https://staticman.net/ for further 
-# instructions. For any support with staticman please direct questions to staticman and 
+# section commented if you aren't using reCaptcha for spam protection.
+# Using Staticman requires advanced knowledge, please consult
+# https://github.com/eduardoboucas/staticman/ and https://staticman.net/ for further
+# instructions. For any support with staticman please direct questions to staticman and
 # not to BeautifulJekyll.
 #staticman:
 #  repository : # GitHub username/repository eg. "daattali/beautiful-jekyll"
 #  branch     : master # If you're not using `master` branch, then you also need to update the `branch` parameter in `staticman.yml`
 #  endpoint   : # URL of your deployment, with a trailing slash eg. "https://<your-api>/v3/entry/github/"
-#  reCaptcha:   # (optional, set these parameters in `staticman.yml` as well) 
+#  reCaptcha:   # (optional, set these parameters in `staticman.yml` as well)
 #    siteKey  : # You need to apply for a site key on Google
 #    secret   : # Encrypt your password by going to https://<your-own-api>/v3/encrypt/<your-site-secret>
 
 # To use giscus comments:
-# (0) Uncomment the following giscus section, (1) Enable Discussions in your GitHub repository, 
+# (0) Uncomment the following giscus section, (1) Enable Discussions in your GitHub repository,
 # (2) Install the giscus app in your repository (details at https://giscus.app),
-# (3) Fill in *all* the parameters below 
+# (3) Fill in *all* the parameters below
 # See more details about giscus and each of the following parameters at https://giscus.app
 #giscus:
 #  hostname: giscus.app # Replace with your giscus instance's hostname if self-hosting
@@ -309,4 +309,3 @@ plugins:
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
-

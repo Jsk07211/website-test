@@ -124,6 +124,21 @@ subtitle: Meet the amazing members of DET
   </div>
 </div>
 
+<!-- Sanchit Burkule -->
+<div class="team-card">
+  <img src="/assets/img/team/sanchit-burkule.jpg" alt="Sanchit Burkule">
+  <div class="team-info">
+    <h3>Sanchit Burkule</h3>
+    <p><strong>NYC Lead</strong></p>
+    <p>
+      <a href="https://www.linkedin.com/in/sanchitburkule/" target="_blank">LinkedIn</a>
+    </p>
+    <div class="bio">
+      Sanchit leads the DET community in NYC organizing data engineering meetups, workshops, and networking events. He's passionate about startups, mentoring engineers, and cultivating a supportive community that drives career growth and technical innovation.
+    </div>
+  </div>
+</div>
+
 <!-- Add more team-card divs here as needed -->
 
 </div>

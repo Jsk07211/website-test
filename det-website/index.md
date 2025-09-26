@@ -5,7 +5,7 @@ subtitle:
 slack_members: 7.5K+
 medium_followers: 30K+
 linkedin_followers: 40K+
-newsletter_subscribers: 7.5K+
+newsletter_subscribers: 10K+
 ---
 
 <script>window.BASE_URL = "{{ '' | absolute_url }}";</script>
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     
                     <div class="tile-footer">
                         <a href="http://join.det.life/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                            Join Slack
+                            <b>Join Slack</b>
                             <svg class="external-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M7 17L17 7"></path>
                                 <path d="M7 7h10v10"></path>
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     
                     <div class="tile-footer">
                         <a href="https://dataengineerthings.substack.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                            Subscribe Now
+                            <b>Subscribe Now</b>
                             <svg class="external-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M7 17L17 7"></path>
                                 <path d="M7 7h10v10"></path>
@@ -134,32 +134,12 @@ document.addEventListener("DOMContentLoaded", function() {
                     
                     <div class="tile-footer">
                         <a href="https://medium.com/data-engineer-things" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                            Read Articles
+                            <b>Read Articles</b>
                             <svg class="external-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M7 17L17 7"></path>
                                 <path d="M7 7h10v10"></path>
                             </svg>
                         </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tile">
-                <div class="tile-content">
-                    <div class="tile-header">
-                        <div class="tile-icon">
-                            <span class="emoji">🛠️</span>
-                        </div>
-                        <div class="tile-info">
-                            <h3 class="tile-title">DET Resource Hub</h3>
-                            <p class="tile-description">Learn data engineering with recommended books, tools, and frameworks</p>
-                        </div>
-                    </div>
-                    
-                    <div class="tile-footer">
-                        <button class="btn btn-primary disabled" disabled>
-                            Browse Resources
-                        </button>
                     </div>
                 </div>
             </div>
@@ -177,8 +157,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     </div>
                     
                     <div class="tile-footer">
-                        <a href="https://www.youtube.com/@data-engineer-things/streams" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                            View Events
+                        <a href="https://www.dataengineerthings.org/event-landing-page/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <b>View Events</b>
                             <svg class="external-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M7 17L17 7"></path>
                                 <path d="M7 7h10v10"></path>
@@ -187,7 +167,25 @@ document.addEventListener("DOMContentLoaded", function() {
                     </div>
                 </div>
             </div>
-
+            <div class="tile">
+                <div class="tile-content">
+                    <div class="tile-header">
+                        <div class="tile-icon">
+                            <span class="emoji">🛠️</span>
+                        </div>
+                        <div class="tile-info">
+                            <h3 class="tile-title">DET Resource Hub</h3>
+                            <p class="tile-description">Learn data engineering with recommended books, tools, and frameworks</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tile-footer">
+                        <button class="btn btn-primary disabled" disabled>
+                            <b>Coming Soon</b>
+                        </button>
+                    </div>
+                </div>
+            </div>
             <div class="tile">
                 <div class="tile-content">
                     <div class="tile-header">
@@ -202,7 +200,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     
                     <div class="tile-footer">
                         <button class="btn btn-primary disabled" disabled>
-                            Get Connected
+                            <b>Coming Soon</b>
                         </button>
                     </div>
                 </div>
