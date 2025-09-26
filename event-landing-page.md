@@ -234,18 +234,6 @@ subtitle: We're a global community of data engineers, building relationships and
         }
 
         /* Buttons */
-        <!-- .btn {
-            display: inline-flex;
-            align-items: center;
-            padding: 0.5rem 1rem;
-            background-color: var(--primary);
-            color: var(--background);
-            text-decoration: none;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        } -->
-
         .btn:hover {
             opacity: 0.9;
         }
