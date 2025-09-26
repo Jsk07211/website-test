@@ -233,17 +233,19 @@ subtitle: We're a global community of data engineers, building relationships and
             line-height: 1.5;
         }
 
-        .btn-primary {
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
             background-color: #16a34a;
             color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 500;
         }
 
-        .btn-primary:hover:not(.disabled) {
-            background-color: #15803d;
-            color: #e5e7eb;
-        }
-
-        /* Buttons */
         .btn:hover {
             opacity: 0.9;
         }
